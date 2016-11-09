@@ -6,7 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
     
-    admin = User.create({:email => "superadmin@example.com" },{first_name: 'super admin'},{last_name: 'admin'},{password: 'password'},{password_confirmation: 'password'}).skip_confirmation!
+    admin = User.create(:email => "super_admin@example.com" ,first_name: 'super admin',last_name: 'admin',password: 'password',password_confirmation: 'password')
+
+    admin.skip_confirmation!
 
     admin.add_role :super_admin
 
