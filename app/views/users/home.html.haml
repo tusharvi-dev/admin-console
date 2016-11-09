@@ -1,6 +1,6 @@
 Hi
 -	if current_user
-	=	current_user.first_name + " " + current_user.last_name
+	=	current_user.first_name.to_s + " " + current_user.last_name.to_s
 	- if  current_user.has_role? :super_admin
 		%p
 		=	link_to admin_users_path, class: "btn btn-info" do   
