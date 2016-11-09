@@ -1,0 +1,8 @@
+Hi
+-	if current_user
+	=	current_user.first_name + " " + current_user.last_name
+	- if  current_user.has_role? :super_admin
+		%p
+		=	link_to admin_users_path, class: "btn btn-info" do   
+			%i.glyphicon.glyphicon-plus
+			%strong Manage Users
