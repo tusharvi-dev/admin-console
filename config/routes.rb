@@ -11,12 +11,21 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'users#home'
+  devise_scope :user do
+    root to: 'users/sessions#new'
+  end
+  
 
   get 'users/:id' => 'users#show', as: :users
 
   namespace :admin do
     resources :users
+    resources :roles
+    resources :user_roles
+    get 'home' => 'dashboard#home'
+    get 'home/:id' => 'users#show'
+    get 'charts' => 'dashboard#charts'
+    get 'tables' => 'dashboard#tables'
   end
 
   # Example of regular route:

@@ -1,6 +1,14 @@
-.panel.panel-primary
-	.panel-heading 
-		%h3 
-			%strong Edit User
-	.panel-body
-	= render 'form_new_edit'
+= render partial: 'admin/dashboard/home'
+.col-lg-8.main
+  .row
+    %ol.breadcrumb
+      %li
+        %a{:href => "/admin/home"}
+          %span.glyphicon.glyphicon-home{"aria-hidden" => "true"}
+      %li.active= @user.class
+  .row
+    .col-lg-12
+      %h1.page-header
+        Edit #{@user.class}
+    .panel-body
+      = render 'form_new_edit'

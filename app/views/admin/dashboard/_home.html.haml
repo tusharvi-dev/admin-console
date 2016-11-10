@@ -1,0 +1,33 @@
+#sidebar-collapse.col-sm-3.col-lg-2.sidebar
+  %ul.nav.menu
+    %li.active
+      %a{:href => "/admin/home"}
+        %span.glyphicon.glyphicon-home{"aria-hidden" => "true"}
+        Dashboard
+    %li
+      %a{:href => "/admin/tables"}
+        %span.glyphicon.glyphicon-list-alt{"aria-hidden" => "true"}
+        Tables
+    %li.parent
+      %a{:href => "#"}
+        %span{"data-toggle" => "collapse", :href => "#sub-item-1"}
+          %span.glyphicon.glyphicon-collapse-down{"aria-hidden" => "true"}
+        Dropdown
+      %ul#sub-item-1.children.collapse
+        %li
+          %a{:href => "#"}
+            %span.glyphicon.glyphicon-home{"aria-hidden" => "true"}
+            Sub Item 1
+        %li
+          %a{:href => "#"}
+            %span.glyphicon.glyphicon-home{"aria-hidden" => "true"}
+            Sub Item 2
+        %li
+          %a{:href => "#"}
+            %span.glyphicon.glyphicon-home{"aria-hidden" => "true"}
+            Sub Item 3
+    %li.divider{:role => "presentation"}
+    %li
+      %a{:href => "/users/sign_in"}
+        %span.glyphicon.glyphicon-home{"aria-hidden" => "true"}
+        Login Page

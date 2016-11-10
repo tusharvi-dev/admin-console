@@ -1,0 +1,51 @@
+= render partial: 'home'
+.col-lg-8.main
+  .row
+    %ol.breadcrumb
+      %li
+        %a{:href => "/admin/home"}
+          %span.glyphicon.glyphicon-home{"aria-hidden" => "true"}
+      %li.active Home
+  .row
+    .col-lg-12
+      %h1.page-header Dashboard
+  / /.row
+  .row
+    .col-xs-12.col-md-6.col-lg-3
+      .panel.panel-blue.panel-widget
+        .row.no-padding
+          .col-sm-3.col-lg-5.widget-left
+          .col-sm-9.col-lg-7.widget-right
+            .large Coming soon..
+            .text-muted Coming soon..
+    .col-xs-12.col-md-6.col-lg-3
+      .panel.panel-orange.panel-widget
+        .row.no-padding
+          .col-sm-3.col-lg-5.widget-left
+          .col-sm-9.col-lg-7.widget-right
+            .large Coming soon..
+            .text-muted Coming soon..
+    .col-xs-12.col-md-6.col-lg-3
+      .panel.panel-teal.panel-widget
+        .row.no-padding
+          .col-sm-3.col-lg-5.widget-left
+          .col-sm-9.col-lg-7.widget-right
+            .large Coming soon..
+            .text-muted Coming soon..
+    .col-xs-12.col-md-6.col-lg-3
+      .panel.panel-red.panel-widget
+        .row.no-padding
+          .col-sm-3.col-lg-5.widget-left
+          .col-sm-9.col-lg-7.widget-right
+            .large Coming soon..
+            .text-muted Page Views
+  / /.row
+  .row
+    .col-lg-12
+      .panel.panel-default
+        .panel-heading Tables
+        .panel-body
+          = render partial: 'database'
+  / /.row
+  .row
+  / /.row

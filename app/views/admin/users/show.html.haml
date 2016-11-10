@@ -1,36 +1,39 @@
-.panel.panel-primary
-	.panel-heading 
-		%h3 
-			%strong
-			= @user.first_name.to_s + " " + @user.last_name.to_s
-	.panel-body
-		%label ID :
-		= @user.id
-		%br/
-		%label Email :
-		= @user.email
-		%br/
-		%label First Name :
-		= @user.first_name
-		%br/
-		%label Last Name :
-		= @user.last_name
-		%br/
-		%label City :
-		= @user.city
-		%br/
-		%label Mobile No :
-		= @user.mobile_number
-		%br/
-
-		= link_to edit_admin_user_path(@user.id), class: "btn btn-info" do   
-			%i.glyphicon.glyphicon-pencil
-			%strong Edit
-
-		= link_to admin_user_path(@user.id), method: :delete, class: "btn btn-info" do   
-			%i.glyphicon.glyphicon-trash
-			%strong Delete
-
-		= link_to admin_users_path, class: "btn btn-info" do   
-			%i.glyphicon.glyphicon-th-list
-			%strong Show All
+= render partial: 'admin/dashboard/home'
+.col-lg-8.main
+  .row
+    %ol.breadcrumb
+      %li
+        %a{:href => "/admin/home"}
+          %span.glyphicon.glyphicon-home{"aria-hidden" => "true"}
+      %li.active= @user.class
+  .row
+    .col-lg-12
+      %h1.page-header= @user.class
+      .panel-body
+        %label ID :
+        = @user.id
+        %br/
+        %label Email :
+        = @user.email
+        %br/
+        %label First Name :
+        = @user.first_name
+        %br/
+        %label Last Name :
+        = @user.last_name
+        %br/
+        %label City :
+        = @user.city
+        %br/
+        %label Mobile No :
+        = @user.mobile_number
+        %br/
+        = link_to edit_admin_user_path(@user.id), class: "btn btn-info" do
+          %i.glyphicon.glyphicon-pencil
+          %strong Edit
+        = link_to admin_user_path(@user.id), method: :delete, class: "btn btn-info" do
+          %i.glyphicon.glyphicon-trash
+          %strong Delete
+        = link_to admin_users_path, class: "btn btn-info" do
+          %i.glyphicon.glyphicon-th-list
+          %strong Show All

@@ -1,6 +1,6 @@
 class Admin::UsersController < ApplicationController
 
-	layout 'admin/application'
+	layout 'admin'
 
 	before_action :remove_password, only: [:update]
 

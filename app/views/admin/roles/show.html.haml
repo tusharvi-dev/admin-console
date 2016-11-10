@@ -1,0 +1,26 @@
+= render partial: 'admin/dashboard/home'
+.col-lg-8.main
+  .row
+    %ol.breadcrumb
+      %li
+        %a{:href => "/admin/home"}
+          %span.glyphicon.glyphicon-home{"aria-hidden" => "true"}
+      %li.active= @role.class
+  .row
+    .col-lg-12
+      %h1.page-header= @role.class
+      %label ID :
+      = @role.id
+      %br/
+      %label Name :
+      = @role.name
+      %br/
+      = link_to edit_admin_role_path(@role.id), class: "btn btn-info" do
+        %i.glyphicon.glyphicon-pencil
+        %strong Edit
+      = link_to admin_role_path(@role.id), method: :delete, class: "btn btn-info" do
+        %i.glyphicon.glyphicon-trash
+        %strong Delete
+      = link_to admin_roles_path, class: "btn btn-info" do
+        %i.glyphicon.glyphicon-th-list
+        %strong Show All

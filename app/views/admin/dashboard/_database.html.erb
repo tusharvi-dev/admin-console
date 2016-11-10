@@ -1,0 +1,32 @@
+<% require 'sqlite3'
+
+begin
+    
+    db = SQLite3::Database.open "db/development.sqlite3"
+
+    pst = db.execute "SELECT name FROM sqlite_master
+            WHERE type='table'
+            ORDER BY name;"
+    pst = pst - [["schema_migrations"],["sqlite_sequence"],["users_roles"]]
+    pst = pst.join(",")
+    pst = pst.split(",")
+    pst.each do |row| %>
+      <div class="large"><%= row.capitalize%>
+       <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="70"
+        aria-valuemin="0" aria-valuemax="100" style="width:<%= row.classify.constantize.count %>%">
+          <%= row.classify.constantize.count %>
+        </div>
+      </div>
+      </div><a href="/admin/<%= row%>">View <%= row%></a>
+    <%
+    end
+
+rescue SQLite3::Exception => e 
+    puts "Exception occurred"
+    puts e    
+ensure
+    db.close if db
+end
+
+%>
