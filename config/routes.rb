@@ -20,8 +20,10 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :users
+    resources :roles
+    resources :user_roles
     get 'home' => 'dashboard#home'
-    get 'home/:id' => 'dashboard#home'
+    get 'home/:id' => 'users#show'
     get 'charts' => 'dashboard#charts'
     get 'tables' => 'dashboard#tables'
   end

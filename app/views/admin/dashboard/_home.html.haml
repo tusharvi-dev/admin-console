@@ -2,53 +2,32 @@
   %ul.nav.menu
     %li.active
       %a{:href => "/admin/home"}
-        %svg.glyph.stroked.dashboard-dial
-          %use{"xlink:href" => "#stroked-dashboard-dial"}
+        %span.glyphicon.glyphicon-home{"aria-hidden" => "true"}
         Dashboard
     %li
-      %a{:href => "/admin/charts"}
-        %svg.glyph.stroked.line-graph
-          %use{"xlink:href" => "#stroked-line-graph"}
-        Charts
-    %li
       %a{:href => "/admin/tables"}
-        %svg.glyph.stroked.table
-          %use{"xlink:href" => "#stroked-table"}
+        %span.glyphicon.glyphicon-list-alt{"aria-hidden" => "true"}
         Tables
-    %li
-      %a{:href => "forms.html"}
-        %svg.glyph.stroked.pencil
-          %use{"xlink:href" => "#stroked-pencil"}
-        Forms
     %li.parent
       %a{:href => "#"}
         %span{"data-toggle" => "collapse", :href => "#sub-item-1"}
-          %svg.glyph.stroked.chevron-down
-            %use{"xlink:href" => "#stroked-chevron-down"}
+          %span.glyphicon.glyphicon-collapse-down{"aria-hidden" => "true"}
         Dropdown
       %ul#sub-item-1.children.collapse
         %li
           %a{:href => "#"}
-            %svg.glyph.stroked.chevron-right
-              %use{"xlink:href" => "#stroked-chevron-right"}
+            %span.glyphicon.glyphicon-home{"aria-hidden" => "true"}
             Sub Item 1
         %li
           %a{:href => "#"}
-            %svg.glyph.stroked.chevron-right
-              %use{"xlink:href" => "#stroked-chevron-right"}
+            %span.glyphicon.glyphicon-home{"aria-hidden" => "true"}
             Sub Item 2
         %li
           %a{:href => "#"}
-            %svg.glyph.stroked.chevron-right
-              %use{"xlink:href" => "#stroked-chevron-right"}
+            %span.glyphicon.glyphicon-home{"aria-hidden" => "true"}
             Sub Item 3
     %li.divider{:role => "presentation"}
     %li
       %a{:href => "/users/sign_in"}
-        %svg.glyph.stroked.male-user
-          %use{"xlink:href" => "#stroked-male-user"}
+        %span.glyphicon.glyphicon-home{"aria-hidden" => "true"}
         Login Page
-/ /.sidebar
-/ /.col
-/ /.row
-/ /.main

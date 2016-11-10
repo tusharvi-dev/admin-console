@@ -3,8 +3,6 @@ class Admin::DashboardController < ApplicationController
   before_action :authenticate_user!
   def home
   end
-  def charts
-  end
   def tables
   end
 end

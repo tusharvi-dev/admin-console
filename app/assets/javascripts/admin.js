@@ -15,4 +15,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require chartkick
+//= require admin/jquery-1.11.1.min
+//= require admin/bootstrap
+//= require admin/bootstrap.min
+//= require admin/html5shiv.min
+//= require admin/respond.min
 //= require_tree .

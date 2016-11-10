@@ -11,18 +11,17 @@
         <% if current_user %>
         <ul class="user-menu">
           <li class="dropdown pull-right">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> <%= current_user.first_name %> <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class=" glyphicon glyphicon-user" aria-hidden="true"></span> <%= current_user.first_name %> <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-              <li><a href="#"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Profile</a></li>
-              <li><a href="#"><svg class="glyph stroked gear"><use xlink:href="#stroked-gear"></use></svg> Settings</a></li>
-              <li><a href="/users/sign_out" data-method="delete"><svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"></use></svg> Logout</a></li>
+              <li><a href="/admin/home/<%= current_user.id %>"><span class=" glyphicon glyphicon-user" aria-hidden="true"></span> Profile</a></li>
+              <li><a href="/users/sign_out" data-method="delete"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>Logout</a></li>
             </ul>
           </li>
         </ul>
          <% else %>
         <ul class="user-menu">
           <li class="dropdown pull-right">
-              <li><a href="/users/sign_in"><svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"></use></svg> Login</a></li>
+              <li><a href="/users/sign_in"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Login</a></li>
             </ul>
           </li>
         </ul>
@@ -30,3 +29,4 @@
       </div>           
     </div>
   </nav>
+

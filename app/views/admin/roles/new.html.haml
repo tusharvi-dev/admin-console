@@ -5,10 +5,10 @@
       %li
         %a{:href => "/admin/home"}
           %span.glyphicon.glyphicon-home{"aria-hidden" => "true"}
-      %li.active= @user.class
+      %li.active= @role.class
   .row
     .col-lg-12
       %h1.page-header
-        New #{@user.class}
+        New #{@role.class}
     .panel-body
       = render 'form_new_edit'
